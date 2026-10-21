@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IIMI Exchange | Campus marketplace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="IIMI Exchange home">
+        <span class="brand-mark">e</span>
+        <span>IIMI <b>Exchange</b></span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#explore">Explore</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#sell" class="nav-sell">+ Sell an item</a>
+      </nav>
+      <button class="avatar" aria-label="Open profile">AK</button>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">THE IIM INDORE MARKETPLACE</p>
+          <h1>Good things deserve a <em>second semester.</em></h1>
+          <p class="hero-text">Buy and sell essentials with people on campus. Less clutter, more community.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#explore">Browse marketplace <span>→</span></a>
+            <a class="button text-button" href="#sell">Start selling</a>
+          </div>
+          <div class="trust-row"><span class="dot"></span> Exclusively for verified IIM Indore students</div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="sun"></div>
+          <div class="blob blob-one"></div><div class="blob blob-two"></div>
+          <div class="product-card book-card"><span>₹ 280</span><div class="book-cover">Marketing<br/><b>Management</b></div><small>Like new</small></div>
+          <div class="product-card cycle-card"><span>₹ 2,400</span><div class="cycle">◯━◯</div><small>Campus pickup</small></div>
+          <div class="sticker">Pre-loved<br/><b>•</b> Pre-approved</div>
+        </div>
+      </section>
+
+      <section id="explore" class="market-section">
+        <div class="section-heading">
+          <div><p class="eyebrow">FRESH ON CAMPUS</p><h2>Find your next great deal.</h2></div>
+          <a href="#all-listings">View all listings <span>→</span></a>
+        </div>
+        <div class="filters" role="group" aria-label="Product categories">
+          <button class="filter active" data-category="all">All items</button>
+          <button class="filter" data-category="books">Books & notes</button>
+          <button class="filter" data-category="electronics">Electronics</button>
+          <button class="filter" data-category="essentials">Hostel essentials</button>
+          <button class="filter" data-category="cycles">Cycles</button>
+        </div>
+        <div class="listing-grid" id="all-listings">
+          <article class="listing" data-category="books"><div class="listing-image notes"><span>Semester 1</span><strong>FINANCE<br/>NOTES</strong></div><div class="listing-body"><p>Books & notes</p><h3>Finance notes bundle</h3><div><b>₹ 350</b><span>• 1 hour ago</span></div></div></article>
+          <article class="listing" data-category="electronics"><div class="listing-image headphones">◖<i>◗</i><span class="tag">Great deal</span></div><div class="listing-body"><p>Electronics</p><h3>boAt wireless headphones</h3><div><b>₹ 650</b><span>• 3 hours ago</span></div></div></article>
+          <article class="listing" data-category="essentials"><div class="listing-image lamp"><span>◉</span><i></i></div><div class="listing-body"><p>Hostel essentials</p><h3>Study lamp, warm white</h3><div><b>₹ 400</b><span>• Yesterday</span></div></div></article>
+          <article class="listing" data-category="cycles"><div class="listing-image bicycle"><span>◯</span><i>━</i><b>◯</b></div><div class="listing-body"><p>Cycles</p><h3>Btwin Riverside 120</h3><div><b>₹ 3,000</b><span>• Yesterday</span></div></div></article>
+        </div>
+      </section>
+
+      <section id="how-it-works" class="how-section">
+        <p class="eyebrow">MADE FOR CAMPUS</p>
+        <h2>Simple, safe, and local.</h2>
+        <div class="steps">
+          <div><span>01</span><h3>Find what you need</h3><p>Discover useful items from students just a walk away.</p></div>
+          <div><span>02</span><h3>Chat & decide</h3><p>Connect directly and agree on a fair price.</p></div>
+          <div><span>03</span><h3>Meet on campus</h3><p>Make the exchange at a familiar IIMI spot.</p></div>
+        </div>
+      </section>
+
+      <section id="sell" class="sell-section">
+        <div><p class="eyebrow">CLEAR SOME SPACE</p><h2>Your unused stuff<br/>is someone’s find.</h2></div>
+        <form id="sell-form" class="sell-form">
+          <label>What are you selling?<input required placeholder="e.g. Study table" /></label>
+          <div class="form-row"><label>Price (₹)<input required type="number" min="0" placeholder="0" /></label><label>Category<select><option>Hostel essentials</option><option>Books & notes</option><option>Electronics</option><option>Cycles</option></select></label></div>
+          <button class="button primary" type="submit">Create listing <span>→</span></button>
+          <p class="form-message" id="form-message" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+    <footer><span>© 2026 IIMI Exchange</span><span>Built for the IIM Indore community</span></footer>
+    <script src="script.js"></script>
+  </body>
+</html>
